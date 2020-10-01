@@ -1,4 +1,5 @@
 import random
+# when game starts , a 4*4 matrix is initialised
 def start_game():
     mat= []
     for i in range(4):
@@ -6,10 +7,12 @@ def start_game():
     
     return mat
 
+# checking if any random position is empty and add a cell with 2 there
 def add_new_2(mat):
     r = random.randint(0,3)
     c = random.randint(0,3)
     
+    # generate a random position until that position is empty
     while mat[r][c] != 0:
         r = random.randint(0,3)
         c = random.randint(0,3)
